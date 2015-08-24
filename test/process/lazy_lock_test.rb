@@ -61,5 +61,14 @@ module JittokuKnife::Process
       FakeModule.lock_start
       assert_true FakeModule3.running?
     end
+
+    def test_dont_catch_exception
+      ex = Exception.new
+      assert_raise ex do 
+        FakeModule.with_lock do
+          raise ex
+        end
+      end
+    end
   end
 end
