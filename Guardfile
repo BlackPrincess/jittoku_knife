@@ -21,6 +21,7 @@ guard :test do
 
   # Non-rails
   watch(%r{^lib/(.+)\.rb$}) { |m| "test/#{m[1]}_test.rb" }
+  watch(%r{^lib/jittoku_knife/(.+)\.rb$}) { |m| "test/#{m[1]}_test.rb" }
 
   # Rails 4
   # watch(%r{^app/(.+)\.rb})                               { |m| "test/#{m[1]}_test.rb" }
