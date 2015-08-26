@@ -41,13 +41,13 @@ module JittokuKnife::CSV
     end
 
     def self.using_csv(path, options: {undef: :replace, invalid: :replace, universal_newline: true}, csv_options: {:headers => :first_row}, &block)
-    encoding = detect_encoding(path)
-    enc_option = get_encoding_option(encoding)
-    
-    Kernel.open(path, enc_option, options) do |f|
-      csv = CSV.new(f, csv_options)
-      block.call(csv)
-    end
+      encoding = detect_encoding(path)
+      enc_option = get_encoding_option(encoding)
+      
+      Kernel.open(path, enc_option, options) do |f|
+        csv = CSV.new(f, csv_options)
+        block.call(csv)
+      end
     end
   end
 
