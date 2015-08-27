@@ -3,6 +3,7 @@ require 'csv'
 
 module JittokuKnife::CSV
   module CSVLoader
+    # Returns file encoding from first line.
     def self.detect_encoding(path)
       begin
         f = File.open(path)
@@ -12,6 +13,10 @@ module JittokuKnife::CSV
       end
     end
 
+    # get_encoding_option
+    # Returns mode_enc
+    # ======= Raise
+    # JittokuKnife::CSV::UnsupportedEncodingException
     def self.get_encoding_option(encoding)
       mode = 'r'
       int_enc = 'UTF-8'
