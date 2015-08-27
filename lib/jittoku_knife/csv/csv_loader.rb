@@ -3,16 +3,6 @@ require 'csv'
 
 module JittokuKnife::CSV
   module CSVLoader
-    CODES = {
-      NKF::JIS      => "JIS",
-      NKF::EUC      => "EUC",
-      NKF::SJIS     => "SJIS",
-      NKF::UTF8     => "UTF8",
-      NKF::BINARY   => "BINARY",
-      NKF::ASCII    => "ASCII",
-      NKF::UNKNOWN  => "UNKNOWN",
-    }
-
     def self.detect_encoding(path)
       begin
         f = File.open(path)

@@ -3,12 +3,6 @@ require 'tempfile'
 
 module JittokuKnife::CSV
   class CSVLoaderTest < Test::Unit::TestCase
-    def setup      
-    end
-
-    def teardown
-    end
-
     def test_detect_encoding
       file = Tempfile.open('sjis') 
       file.puts('項目1,項目2,項目3'.encode(Encoding::SJIS))
