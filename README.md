@@ -1,6 +1,7 @@
 # JittokuKnife
 
 [![Build Status](https://travis-ci.org/BlackPrincess/jittoku_knife.svg)](https://travis-ci.org/BlackPrincess/jittoku_knife)
+[![Coverage Status](https://coveralls.io/repos/BlackPrincess/jittoku_knife/badge.svg?branch=coveralls&service=github)](https://coveralls.io/github/BlackPrincess/jittoku_knife?branch=coveralls)
 
 ## Installation
 
