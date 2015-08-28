@@ -1,3 +1,5 @@
+# coding: utf-8
+
 module JittokuKnife::Process
   def self.configure(&block)
     yield @config ||= JittokuKnife::Process::Configuration.new
