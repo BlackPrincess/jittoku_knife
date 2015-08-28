@@ -1,3 +1,5 @@
+# coding: utf-8
+
 module JittokuKnife::Process
   module LazyLock
     def pid_file_name_base
